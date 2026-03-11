@@ -53,7 +53,17 @@ csgo/addons/sourcemod/configs/leaderos_connect.cfg
 
 If the config file does not exist, the plugin will auto-generate it with default values on first run.
 
-### 4. Restart your server
+### 4. Required server configuration
+
+Add this to your `csgo/cfg/server.cfg`:
+
+```
+sv_hibernate_when_empty 0
+```
+
+Without this, the server enters sleep mode when no players are connected and stops processing game ticks. This prevents commands from executing on an empty server.
+
+### 5. Restart your server
 
 Restart your server. The plugin is now active. Run `leaderos_status` in the server console to confirm everything is working.
 
