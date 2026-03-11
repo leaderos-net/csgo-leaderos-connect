@@ -1,0 +1,4 @@
+.idea
+scripting/compiled
+bin/*
+.DS_Store
